@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Customer;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class InputFormController extends Controller
@@ -13,7 +15,9 @@ class InputFormController extends Controller
      */
     public function index()
     {
-        return view('front.index');
+        $product = Product::all();
+        $customers = Customer::all();
+        return view('front.index', compact('product', 'customers'));
     }
 
     /**

@@ -40,19 +40,21 @@
                <div class="row">
                 <div class="col-sm-6">
                     <div class="form-group">
-                        <select name="" id="" class="form-control">
+                        <select class="form-control">
                             <option value="">Add product or item</option>
-                            <option value="">value1</option>
-                            <option value="">value1</option>
+                            @foreach($product as $item)
+                            <option value="{{$item->id}}">{{$item->name}}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
-                        <select name="" id="" class="form-control">
+                        <select class="form-control">
                             <option value="">Select a customer</option>
-                            <option value="">null</option>
-                            <option value="">null</option>
+                            @foreach($customers as $customer)
+                            <option value="{{$customer->id}}">{{$customer->name}}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>
@@ -64,53 +66,55 @@
                </div>
             </div>
                <div class="card-body">
-                <div class="col-sm-12">
-                    <table class="table table-bordered table-striped bg-color:yellow">
-                        <thead style="background: #5fab48; color: white;">
-                            <tr>
-                                <th>Product</th>
-                                <th>Rate</th>
-                                <th>Qty</th>
-                                <th>Totall Amount</th>
-                                <th>Discount (Amt)</th>
-                                <th>Net Amount</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>item</td>
-                                <td>100</td>
-                                <td><input type="number"></td>
-                                <td>100</td>
-                                <td><input type="inmber"></td>
-                                <td>100</td>
-                            </tr>
-                            <tr>
-                                <td>item</td>
-                                <td>100</td>
-                                <td><input type="number"></td>
-                                <td>100</td>
-                                <td><input type="inmber"></td>
-                                <td>100</td>
-                            </tr>
-                            <tr>
-                                <td>item</td>
-                                <td>100</td>
-                                <td><input type="number"></td>
-                                <td>100</td>
-                                <td><input type="inmber"></td>
-                                <td>100</td>
-                            </tr>
-                            <tr>
-                                <td>item</td>
-                                <td>100</td>
-                                <td><input type="number"></td>
-                                <td>100</td>
-                                <td><input type="inmber"></td>
-                                <td>100</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table class="table table-bordered table-striped bg-color:yellow">
+                            <thead style="background: #5fab48; color: white;">
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Rate</th>
+                                    <th>Qty</th>
+                                    <th>Totall Amount</th>
+                                    <th>Discount (Amt)</th>
+                                    <th>Net Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>item</td>
+                                    <td>100</td>
+                                    <td><input type="number"></td>
+                                    <td>100</td>
+                                    <td><input type="inmber"></td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <td>item</td>
+                                    <td>100</td>
+                                    <td><input type="number"></td>
+                                    <td>100</td>
+                                    <td><input type="inmber"></td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <td>item</td>
+                                    <td>100</td>
+                                    <td><input type="number"></td>
+                                    <td>100</td>
+                                    <td><input type="inmber"></td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <td>item</td>
+                                    <td>100</td>
+                                    <td><input type="number"></td>
+                                    <td>100</td>
+                                    <td><input type="inmber"></td>
+                                    <td>100</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                </div>
             <div class="card-body">
